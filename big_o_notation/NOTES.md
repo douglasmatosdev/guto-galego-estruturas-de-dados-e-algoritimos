@@ -217,3 +217,9 @@ Vamos usar um exemplo do algoritmo `mergesort`.
 Basicamente é um loop dentro de outro loop.
 
 Para cada iten da lista e percorre todos os outros.
+
+## Outros tipos mais acadêmicos
+
+- O (2^n)
+- O (raz de n)
+- O (n!)
