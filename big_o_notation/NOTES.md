@@ -138,3 +138,35 @@ const list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
 ```
 
 O seja, isso é `O Log(n)`, pois o algoritmo está escalando logaritmicamente, aumentando de 1 em 1 e não dobrando o tempo.
+
+
+## Pessimista
+
+### Conplexidade temporal
+
+Em `O(n)` onde `n` é o tamanho do input de dados, digamos que em uma lista de 10 elementos ordenados nós precisamos encontrar o número 3.
+```
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+```
+Veja que precisaremos apenas de 3 passos para achar o valor desejado.
+
+Neste caso, podemos dizer que o algoritmo é melhor que `O(n)`, tipo um `O(3)` ???
+
+NÃO!!!
+
+Porque, sempre vamos considerar o pior caso, sempre imaginando que talvez o valor desejado esteja no fim da lista de tamanho `n`, logo temos `O(n)`.
+
+### Complexidade espacial
+
+Em `O(n)` onde `n` é o tamanho do input de dados, digamos que em uma lista de 10 elementos ordenados nós precisamos criar uma nova lista a partir da primeira, onde cada item desta lista tem o seu valor dobrado.
+```javascript
+// lista inicial
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+// nova lista
+[2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+```
+
+Veja que para criarmos uma nova lista, precisamos alocar na memória uma quantidade de espaço exatamento do mesmo tamanho que a lista inicial.
+
+Neste caso, a complexidade espacial é `O(n)` também.
