@@ -1,6 +1,8 @@
-# Algoritmos e estruturas de dados
+# [Algoritmos e estruturas de dados](https://pay.hub.la/L8wi9vio7WPnWbmF8ZIO?ref=wKoselItQp47pK9bOO0U)
 
-#### Curso do professor Guto Galego
+#### [Curso do professor Guto Galego](https://pay.hub.la/L8wi9vio7WPnWbmF8ZIO?ref=wKoselItQp47pK9bOO0U)
+
+
 
 > Aqui são minhas anotações e entendimentos sobre o que estou aprendendo no curso.
 
