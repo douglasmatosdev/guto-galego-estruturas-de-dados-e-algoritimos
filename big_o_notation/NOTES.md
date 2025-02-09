@@ -211,3 +211,9 @@ Vamos usar um exemplo do algoritmo `mergesort`.
 ### Complexidade espacial
 
 É muito difícil acontecer...
+
+## O (n²)
+
+Basicamente é um loop dentro de outro loop.
+
+Para cada iten da lista e percorre todos os outros.
