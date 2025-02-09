@@ -70,4 +70,71 @@ Log2 (20) -> 4.321928
 Log2 (40) -> 5.321928
 ```
 
-# > Em breve ...
+Veja que dobramos o valor de `10` para `20` e o resulta não dobrou, auemntou apenas `1`, de `3.321928` para `4.321928`.
+
+Exemplo usando o algoritmo `Binary Search`.
+
+Usando o algoritmo `Binary Search` veja quantas etapas são necessárias para encontrar o número `3` em uma lista com `10` ordenados.
+
+```javascript
+const list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+// ETAPA 1
+// [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+// Vamos dividir no meio:
+// [1, 2, 3, 4, 5]
+// [6, 7, 8, 9, 10]
+
+// Veja que 3 é menor que todos os itens da segunda metada de lista, então podemos descartar a segunda metade
+
+// ETAPA 2
+// [1, 2, 3, 4, 5]
+// Vamos dividir no meio a lista restante, neste caso o meio é o 3, na maioria das implementações de Binary Search é considerado o elemento da esquerda, que no caso é o 2.
+// [1, 2] 
+// [3, 4, 5]
+
+// ETAPA 3
+// [3, 4, 5]
+// Vamos dividir no meio novamento
+// [3]
+// [4, 5]
+
+// Veja que agora temos o elemento 3
+```
+
+Foram necessárias 3 etapas para encontrar o valor 3 em uma lista com 10 elementos ordenados.
+
+Agora, se dobrarmos o tamnho da lista? A quantidade de etapas dobra? Vamos testar.
+
+
+```javascript
+const list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+
+// ETAPA 1
+// [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+// Vamos dividir no meio:
+// [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+// [11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+
+// ETAPA 2
+// [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+// Vamos dividir no meio.
+// [1, 2, 3, 4, 5]
+// [6, 7, 8, 9, 10]
+
+// ETAPA 3
+// [1, 2, 3, 4, 5]
+// Vamos dividir no meio novamento
+// [1, 3]
+// [3, 4, 5]
+
+// ETAPA 4
+// [3, 4, 5]
+// Vamos dividir no meio novamento
+// [3]
+// [4, 5]
+
+// Veja que agora temos o elemento 4
+```
+
+O seja, isso é `O Log(n)`, pois o algoritmo está escalando logaritmicamente, aumentando de 1 em 1 e não dobrando o tempo.
