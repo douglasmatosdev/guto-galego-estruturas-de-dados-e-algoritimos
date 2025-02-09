@@ -170,3 +170,44 @@ Em `O(n)` onde `n` é o tamanho do input de dados, digamos que em uma lista de 1
 Veja que para criarmos uma nova lista, precisamos alocar na memória uma quantidade de espaço exatamento do mesmo tamanho que a lista inicial.
 
 Neste caso, a complexidade espacial é `O(n)` também.
+
+
+## O (n Log n) 
+
+### Complexidade temporal
+
+Quase todos algoritmos de `sort` e de `dividir para conquistar` são `O (n Log n)`, com exceção do algoritmo `Bubblesort` que é `O(n²)`.
+
+- Sorting (quicksort, mergesort)
+- Divide and conquer
+
+Não vamos explicar matemáticamente o que é `n log n`.
+
+Vamos usar um exemplo do algoritmo `mergesort`.
+
+```graph
+            [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+                            |
+                           / \
+                          /   \
+                         /     \
+          [1, 2, 3, 4, 5]       [ 6, 7, 8, 9, 10]
+                 |                      |
+                / \                    / \
+               /   \                  /   \
+         [1, 2]     [3, 4, 5]   [6, 7]     [8, 9, 10]
+           |             |         |             |
+          / \           / \       / \           / \
+         /   \         /   \    [6]  [7]      [8]  [9, 10]
+      [1]     [2]   [3]     [4, 5]                   |
+                              |                     / \
+                             / \                 [9]   [10]
+                          [4]   [5]
+
+[1] -> [2] -> [3] -> [4] -> [5] -> [6] -> [7] -> [8] -> [9] -> [10]
+```
+
+
+### Complexidade espacial
+
+É muito difícil acontecer...
